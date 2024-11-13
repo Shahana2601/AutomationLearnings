@@ -11,7 +11,10 @@ public class LaunchCromeDriver {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://facebook.com/login");
-        System.out.println(driver.getTitle());
+        String chromeTitle = driver.getTitle();
+        System.out.println(chromeTitle);
+        //current url
+        System.out.println(driver.getCurrentUrl());
         driver.close();
 
         //System.setProperty("webdriver.gecko.driver" , "geckodriver.exe");
@@ -20,5 +23,12 @@ public class LaunchCromeDriver {
         webDriver.get("https://facebook.com/login");
         System.out.println(webDriver.getTitle());
         webDriver.close();
+
+        if(chromeTitle.equals("Log in to Facebook")){
+            System.out.println("It is correct title");
+        }
+        else {
+            System.out.println("incorrect title");
+        }
     }
 }
