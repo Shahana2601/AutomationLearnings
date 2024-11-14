@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class MouseMovementHandler {
-    
+
     @Test
     void handleMouseMovements() throws InterruptedException {
         WebDriver chromeDriver = new ChromeDriver();
