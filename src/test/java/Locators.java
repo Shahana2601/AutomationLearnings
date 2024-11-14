@@ -20,4 +20,14 @@ public class Locators {
 
         chromeDriver.close();
     }
+
+    @Test
+    void findButtonLocators(){
+        WebDriver chromeDriver = new ChromeDriver();
+        chromeDriver.get("https://manojkumar4636.github.io/Selenium_Practice_Hub/home.html");
+
+        chromeDriver.findElement(By.xpath("//h5[text()='Button']//parent::a")).click();
+        chromeDriver.findElement(By.xpath("//button[@id='home']")).click();
+        chromeDriver.close();
+    }
 }
