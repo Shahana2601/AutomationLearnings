@@ -5,7 +5,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class ExplicitWait {
@@ -42,7 +41,6 @@ public class ExplicitWait {
         WebElement textChangeElement = chromeDriver.findElement(By.xpath("//h5[text()='Wait for Text Change']//parent::a"));
         clickOn(chromeDriver, textChangeElement, Duration.ofSeconds(20));
 
-        // }
         WebElement buttonClickMe = chromeDriver.findElement(By.xpath("//button[@id='btn' and @onClick='clicked()']"));
         clickOn(chromeDriver, buttonClickMe, Duration.ofSeconds(10));
         WebDriverWait wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(10));
@@ -53,10 +51,8 @@ public class ExplicitWait {
         // if (Objects.equals(alertText2, "Click ME!")){
         changeAlert2.accept();
 
-
 //        Alert changeAlert1 = wait.until(ExpectedConditions.alertIsPresent());
 //        changeAlert1.accept();
-
     }
 
     public static void sendKeys(WebDriver webDriver, WebElement webElement, Duration timeout, String value){

@@ -15,6 +15,8 @@ public class FrameHandler {
 
         Thread.sleep(3000);
         chromeDriver.findElement(By.xpath("//button[@id='Click']")).click();
+        //Thread.sleep(3000);
+        //chromeDriver.quit();
     }
 
     @Test
@@ -27,5 +29,6 @@ public class FrameHandler {
 
         Thread.sleep(3000);
         chromeDriver.findElement(By.xpath("//button[@id='Click1']")).click();
+        //chromeDriver.switchTo().defaultContent(); // outermost frame
     }
 }

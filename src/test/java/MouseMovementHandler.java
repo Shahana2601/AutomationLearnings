@@ -17,7 +17,7 @@ public class MouseMovementHandler {
         actions.moveToElement(chromeDriver.findElement(By.linkText("TestLeaf Courses"))).build().perform();
 
         Thread.sleep(5000);
-        chromeDriver.findElement(By.linkText("Selenium")).click();
+        chromeDriver.findElement(By.xpath("//a[@class='listener' and text()='Selenium']")).click();
 
         Alert alert = chromeDriver.switchTo().alert();
         alert.accept();
