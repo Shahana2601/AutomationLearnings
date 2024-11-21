@@ -52,4 +52,23 @@ public class AlertAndPopUpHandler {
         alert.sendKeys("test");
         alert.accept();
     }
+
+    @Test
+    void alertHandle() throws InterruptedException {
+        WebDriver webDriver =  new ChromeDriver();
+
+        webDriver.manage().window().maximize();
+        webDriver.manage().deleteAllCookies();
+
+        webDriver.get("https://manojkumar4636.github.io/Selenium_Practice_Hub/home.html");
+        webDriver.findElement(By.xpath("//h5[text()='Alert']//parent::a")).click();
+
+        Thread.sleep(2000);
+        webDriver.findElement(By.xpath("//button[@onclick='confirmPrompt()']")).click();
+
+        Alert alert = webDriver.switchTo().alert();
+        Thread.sleep(2000);
+        alert.sendKeys("The elixr labs");
+        alert.accept();
+    }
 }
