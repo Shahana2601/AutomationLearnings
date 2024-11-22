@@ -18,5 +18,7 @@ public class DragAndDropHandler {
         actions.clickAndHold(chromeDriver.findElement(By.xpath("//button[@id='drag_source']")))
                 .moveToElement(chromeDriver.findElement(By.xpath("//div[@id='drop_target']")))
                 .release().build().perform();
+        Thread.sleep(2000);
+        chromeDriver.close();
     }
 }

@@ -7,7 +7,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -52,7 +51,7 @@ public class ReadPropFile {
         chromeDriver.findElement(By.xpath(alertXpath)).click();
         chromeDriver.findElement(By.xpath(alertButtonXpath)).click();
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         Alert alert = chromeDriver.switchTo().alert();
         System.out.println(alert.getText());

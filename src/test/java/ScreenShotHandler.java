@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class ScreenShotHandler {
 
     @Test
-    void generateScreenshot() throws IOException {
+    void generateScreenshot() throws IOException, InterruptedException {
         WebDriver chromeDriver =  new ChromeDriver();
         chromeDriver.manage().window().maximize();
         chromeDriver.manage().deleteAllCookies();
@@ -23,5 +23,8 @@ public class ScreenShotHandler {
         chromeDriver.get("https://www.google.com/");
         File src = ((TakesScreenshot)chromeDriver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(src, new File("C:\\Users\\shahana.shajahan\\Desktop\\AutomationLearnings\\Screenshots\\google.png"));
+
+        Thread.sleep(2000);
+        chromeDriver.quit();
     }
 }

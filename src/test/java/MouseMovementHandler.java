@@ -1,4 +1,3 @@
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,12 +13,12 @@ public class MouseMovementHandler {
         chromeDriver.findElement(By.xpath("//h5[text()='Mouse Hover']//parent::a")).click();
 
         Actions actions = new Actions(chromeDriver);
+        Thread.sleep(2000);
         actions.moveToElement(chromeDriver.findElement(By.linkText("TestLeaf Courses"))).build().perform();
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         chromeDriver.findElement(By.xpath("//a[@class='listener' and text()='Selenium']")).click();
 
-        Alert alert = chromeDriver.switchTo().alert();
-        alert.accept();
+        chromeDriver.switchTo().alert().accept();
     }
 }
