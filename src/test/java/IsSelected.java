@@ -13,7 +13,6 @@ public class IsSelected {
 
         driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio");
         driver.switchTo().frame("iframeResult");
-        Thread.sleep(2000);
         WebElement htmlBtn = driver.findElement(By.cssSelector("input#html"));
 
         //isSelected() value before selecting radio button

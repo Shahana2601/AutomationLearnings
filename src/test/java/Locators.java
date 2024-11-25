@@ -22,12 +22,14 @@ public class Locators {
     }
 
     @Test
-    void findButtonLocators(){
+    void findButtonLocators() throws InterruptedException {
         WebDriver chromeDriver = new ChromeDriver();
         chromeDriver.get("https://manojkumar4636.github.io/Selenium_Practice_Hub/home.html");
 
         chromeDriver.findElement(By.xpath("//h5[text()='Button']//parent::a")).click();
         chromeDriver.findElement(By.xpath("//button[@id='home']")).click();
+
+        Thread.sleep(2000);
         chromeDriver.close();
     }
 }
