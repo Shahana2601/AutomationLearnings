@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-27T11:57:41 IST" name="Default Suite" finished-at="2024-11-27T11:58:27 IST" duration-ms="45531">
+    <groups>
+    </groups>
+    <test started-at="2024-11-27T11:57:41 IST" name="AutomationLearnings" finished-at="2024-11-27T11:58:27 IST" duration-ms="45531">
+      <class name="AlertAndPopUpHandler">
+        <test-method signature="alertHandle()[pri:0, instance:AlertAndPopUpHandler@d706f19]" started-at="2024-11-27T11:57:41 IST" name="alertHandle" finished-at="2024-11-27T11:57:55 IST" duration-ms="13635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertHandle -->
+        <test-method signature="handleAlertBoxPopUp()[pri:0, instance:AlertAndPopUpHandler@d706f19]" started-at="2024-11-27T11:57:55 IST" name="handleAlertBoxPopUp" finished-at="2024-11-27T11:58:06 IST" duration-ms="10546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleAlertBoxPopUp -->
+        <test-method signature="handleConfirmBoxPopUp()[pri:0, instance:AlertAndPopUpHandler@d706f19]" started-at="2024-11-27T11:58:06 IST" name="handleConfirmBoxPopUp" finished-at="2024-11-27T11:58:17 IST" duration-ms="11187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleConfirmBoxPopUp -->
+        <test-method signature="handlePromptBoxPopUp()[pri:0, instance:AlertAndPopUpHandler@d706f19]" started-at="2024-11-27T11:58:17 IST" name="handlePromptBoxPopUp" finished-at="2024-11-27T11:58:27 IST" duration-ms="10104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handlePromptBoxPopUp -->
+      </class> <!-- AlertAndPopUpHandler -->
+    </test> <!-- AutomationLearnings -->
+  </suite> <!-- Default Suite -->
+</testng-results>

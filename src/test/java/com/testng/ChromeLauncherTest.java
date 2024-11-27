@@ -23,26 +23,31 @@ public class ChromeLauncherTest {
         chromeDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         chromeDriver.get("https://google.com");
+        System.out.println("before setup");
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "smoke")
     public void testChromeTitle(){
         String browserTitle = chromeDriver.getTitle();
         System.out.println(browserTitle);
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2,groups = "regression ")
     public void mailLinkTest(){
         boolean b = chromeDriver.findElement(By.linkText("Gmail")).isDisplayed();
+        //int i=9/0;
+        System.out.println("test2");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3,groups = "Link test", dependsOnMethods = "mailLinkTest")
     public void logoDisplayTest(){
         boolean logo = chromeDriver.findElement(By.className("lnXdpd")).isDisplayed();
+        System.out.println("test3");
     }
 
     @AfterMethod
     public void tearDown(){
         chromeDriver.quit();
+        System.out.println("after teardown");
     }
 }
