@@ -10,7 +10,7 @@
         <parameter name="emailId" value="test@yahoo.com"/>
 
         <classes>
-            <class name="com.testng.ParameterTest"/>
+            <class name="com.test.testng.ParameterTest"/>
         </classes>
     </test>
 </suite>

@@ -1,4 +1,4 @@
-package com.testng;
+package com.test.testng;
 
 import org.testng.annotations.Test;
 
