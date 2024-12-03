@@ -10,7 +10,7 @@ public class OrangeHrmLogin {
 
     WebDriver webDriver;
 
-    @Test(dataProvider = "loginTestData")
+    @Test(dataProvider = "getData", dataProviderClass = ExcelDataSupplier.class)
     public void adminLogin(String username, String password){
         webDriver = new ChromeDriver();
         webDriver.get("https://practicetestautomation.com/practice-test-login/");
@@ -19,6 +19,9 @@ public class OrangeHrmLogin {
         webDriver.findElement(By.id("password")).sendKeys(password);
 
         webDriver.findElement(By.id("submit")).click();
+        System.out.println("test passed");
+
+        webDriver.quit();
     }
 
     @DataProvider(name = "loginTestData")
@@ -27,8 +30,8 @@ public class OrangeHrmLogin {
         data[0][1] = "student";
         data[0][0] = "Password123";
 
-        data[1][0] = "Test123";
-        data[1][1] = "test123";
+//        data[1][0] = "Test123";
+//        data[1][1] = "test123";
 
         return data;
     }

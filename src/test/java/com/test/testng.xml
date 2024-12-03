@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--<suite name="Yahoo automation test suite">-->
+<!--    <test name="Yahoo App Test">-->
+<!--        <parameter name="env" value="QA"/>-->
+
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <parameter name="url" value="https://login.yahoo.com/"/>-->
+<!--        <parameter name="emailId" value="test@yahoo.com"/>-->
+
+<!--        <classes>-->
+<!--            <class name="com.test.testng.ParameterTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<suite name="RetryFailedTestSuite" verbose="1">
+    <listeners>
+        <listener class-name="java.com.test.retrytest.TestTransformer"></listener>
+    </listeners>
+    <test name="RetryMultipleFailedTestCase">
+        <classes>
+            <class name="java.com.test.retrytest.LoginTest.java"/>
+        </classes>
+    </test>
+</suite>

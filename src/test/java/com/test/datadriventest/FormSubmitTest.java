@@ -25,11 +25,6 @@ public class FormSubmitTest {
         webDriver.get("https://fs2.formsite.com/meherpavan/form2/index.html?1537702596407");
     }
 
-    @DataProvider
-    public void getTestData(){
-
-    }
-
     @Test
     public void formSubmitTest(String fname, String lname, String phone, String country, String city, String email, String gender, String days, String time) throws InterruptedException {
         webDriver.findElement(By.id("RESULT_TextField-1")).sendKeys("Shahana");
