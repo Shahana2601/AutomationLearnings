@@ -17,11 +17,12 @@
 
 <suite name="RetryFailedTestSuite" verbose="1">
     <listeners>
-        <listener class-name="java.com.test.retrytest.TestTransformer"></listener>
+        <listener class-name="com.test.retrytest.TestTransformer"></listener>
     </listeners>
     <test name="RetryMultipleFailedTestCase">
         <classes>
-            <class name="java.com.test.retrytest.LoginTest.java"/>
+            <!-- Corrected class reference without the .java extension -->
+            <class name="com.test.retrytest.LoginTest"/>
         </classes>
     </test>
 </suite>
