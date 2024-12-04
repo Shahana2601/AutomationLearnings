@@ -18,7 +18,6 @@ public class LoginTest {
 
         webDriver.get("https://practicetestautomation.com/practice-test-login/");
 
-
         webDriver.findElement(By.id("username")).sendKeys(username);
         webDriver.findElement(By.id("password")).sendKeys(password);
 
