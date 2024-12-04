@@ -1,3 +1,4 @@
+package com.test.seleniumtest;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
